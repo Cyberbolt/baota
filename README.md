@@ -32,7 +32,7 @@ docker run -itd --net=host --restart=always --name baota cyberbolt/baota:latest 
 ```
 该方法的登录方式:
 
-登陆地址: http://{{服务器的ip地址}}:8888
+登陆地址: http://{{服务器的ip地址}}:{{您输入的端口号}}
 
 账号: 您填写的用户名
 
@@ -106,7 +106,7 @@ docker run -itd -v /www:/www --net=host --restart=always --name baota cyberbolt/
 ```
 该方法的登录方式:
 
-登陆地址: http://{{服务器的ip地址}}:8888
+登陆地址: http://{{服务器的ip地址}}:{{您输入的端口号}}
 
 账号: 您填写的用户名
 
