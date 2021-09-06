@@ -11,15 +11,17 @@
 ### 方案一（最快化部署）
 
 ```
-docker run -itd --net=host --name baota cyberbolt/baota:latest -port 端口号 -username 用户名 -password 密码
+docker run -itd --net=host --restart=always --name baota cyberbolt/baota:latest -port 端口号 -username 用户名 -password 密码
 ```
 示例如
 
 ```
-docker run -itd --net=host --name baota cyberbolt/baota:latest -port 8888 -username cyberbolt -password abc123456
+docker run -itd --net=host --restart=always --name baota cyberbolt/baota:latest -port 8888 -username cyberbolt -password abc123456
 ```
 
 --net=host : 容器和主机使用同一网络
+
+--restart=always: 守护进程，容器挂掉将自动重启
 
 -port : 填写宝塔面板运行的端口号
 
@@ -40,7 +42,7 @@ docker run -itd --net=host --name baota cyberbolt/baota:latest -port 8888 -usern
 **如果您未自定义用户名和密码，直接使用的如下命令**
 
 ```
-docker run -itd --net=host --name baota cyberbolt/baota:latest
+docker run -itd --net=host --restart=always --name baota cyberbolt/baota:latest
 ```
 
 **宝塔面板也会自动创建，此时可通过默认信息登录，默认信息为**
@@ -82,16 +84,18 @@ docker stop baota-test && docker rm baota-test
 创建宝塔面板容器，并将宿主机目录映射至容器中（自行输入面板的 端口号、用户名 和 密码 后即可完成部署）
 
 ```
-docker run -itd -v /www:/www --net=host --name baota cyberbolt/baota:latest -port 端口号 -username 用户名 -password 密码
+docker run -itd -v /www:/www --net=host --restart=always --name baota cyberbolt/baota:latest -port 端口号 -username 用户名 -password 密码
 ```
 
 示例如
 
 ```
-docker run -itd -v /www:/www --net=host --name baota cyberbolt/baota:latest -port 8888 -username cyberbolt -password abc123456
+docker run -itd -v /www:/www --net=host --restart=always --name baota cyberbolt/baota:latest -port 8888 -username cyberbolt -password abc123456
 ```
 
 --net=host : 容器和主机使用同一网络
+
+--restart=always: 守护进程，容器挂掉将自动重启
 
 -port : 填写宝塔面板运行的端口号
 
