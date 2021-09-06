@@ -1,4 +1,5 @@
-FROM dd91ba1ac6d3
+FROM 370e13bad0d4
 
-ENTRYPOINT ["/app/venv/bin/python3","/app/script.py"]
+WORKDIR /app
+ENTRYPOINT ["python3","script.py"]
 CMD ["-port","8888","-username","cyber","-password","abc12345"]
