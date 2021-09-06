@@ -1,6 +1,6 @@
 ### Docker 部署宝塔面板
 
-此方案可能是全网最快的 宝塔面板 部署方案。该镜像基于 宝塔Linux正式版 7.7.0（官方纯净版，可升级） 制作。维护脚本使用 Python 开发，源码和 Dockerfile 均已上传至 GitHub（欢迎您的 Star）。
+此方案可能是全网最快的 宝塔面板 部署方案。该镜像基于 宝塔Linux正式版 7.7.0（官方纯净版，可升级） 制作。维护脚本使用 Python 开发，源码和 Dockerfile 均已上传至 [GitHub](https://github.com/Cyberbolt/baota)（欢迎您的 Star）。
 
 本镜像仅保留了最精简的 宝塔面板，未安装任何插件。初始化容器后，您可以根据需要选择安装插件。"Simple is better than complex!" 此外，如果您在生产环境下部署宝塔面板，请务必参考 **方案二** 创建容器。
 
