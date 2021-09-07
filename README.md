@@ -4,9 +4,9 @@
 
 本镜像仅保留了最精简的 宝塔面板，未安装任何插件。初始化容器后，您可以根据需要选择安装插件。"Simple is better than complex!" 此外，如果您在生产环境下部署宝塔面板，请务必参考 **方案二** 创建容器。
 
-支持系统：Linux，macOS(支持 Apple silicon)，Windows
+**支持系统：Linux，macOS(支持 Apple silicon)，Windows**
 
-架构：amd 64，arm 64
+**架构：amd 64，arm 64**
 
 使用方法如下:
 
