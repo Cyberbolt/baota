@@ -1,4 +1,4 @@
-FROM 370e13bad0d4
+FROM cyberbolt/baota
 
 WORKDIR /app
 ENTRYPOINT ["python3","script.py"]
