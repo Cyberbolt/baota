@@ -15,12 +15,16 @@
 ### 方案一（最快化部署）
 
 ```
-docker run -itd --net=host --restart=always --name baota cyberbolt/baota:latest -port 端口号 -username 用户名 -password 密码
+docker run -itd --net=host --restart=always \
+--name baota cyberbolt/baota \
+-port 端口号 -username 用户名 -password 密码
 ```
 示例如
 
 ```
-docker run -itd --net=host --restart=always --name baota cyberbolt/baota:latest -port 8888 -username cyberbolt -password abc123456
+docker run -itd --net=host --restart=always \
+--name baota cyberbolt/baota \
+-port 8888 -username cyberbolt -password abc123456
 ```
 
 --net=host : 容器和主机使用同一网络
@@ -46,7 +50,8 @@ docker run -itd --net=host --restart=always --name baota cyberbolt/baota:latest 
 **如果您未自定义用户名和密码，直接使用的如下命令**
 
 ```
-docker run -itd --net=host --restart=always --name baota cyberbolt/baota:latest
+docker run -itd --net=host --restart=always \
+--name baota cyberbolt/baota
 ```
 
 **宝塔面板也会自动创建，此时可通过默认信息登录，默认信息为**
@@ -70,7 +75,9 @@ docker run -itd --net=host --restart=always --name baota cyberbolt/baota:latest
 输入命令创建测试容器（这里仅为测试容器，为避免出错，后面几步请原封不动地复制粘贴）
 
 ```
-docker run -itd --net=host --name baota-test cyberbolt/baota:latest -port 26756 -username cyberbolt -password abc123456
+docker run -itd --net=host \
+--name baota-test cyberbolt/baota \
+-port 26756 -username cyberbolt -password abc123456
 ```
 
 将 Docker 容器中的 /www 目录 拷贝至宿主机的 /www
@@ -88,13 +95,17 @@ docker stop baota-test && docker rm baota-test
 创建宝塔面板容器，并将宿主机目录映射至容器中（自行输入面板的 端口号、用户名 和 密码 后即可完成部署）
 
 ```
-docker run -itd -v /www:/www --net=host --restart=always --name baota cyberbolt/baota:latest -port 端口号 -username 用户名 -password 密码
+docker run -itd -v /www:/www --net=host --restart=always \
+--name baota cyberbolt/baota:latest \
+-port 端口号 -username 用户名 -password 密码
 ```
 
 示例如
 
 ```
-docker run -itd -v /www:/www --net=host --restart=always --name baota cyberbolt/baota:latest -port 8888 -username cyberbolt -password abc123456
+docker run -itd -v /www:/www --net=host --restart=always \
+--name baota cyberbolt/baota:latest \
+-port 8888 -username cyberbolt -password abc123456
 ```
 
 --net=host : 容器和主机使用同一网络
