@@ -6,7 +6,7 @@
 
 **支持系统：Linux，macOS(支持 Apple silicon)，Windows**
 
-**架构：amd 64，arm 64**
+**架构：x86-64，ARM 64**
 
 使用方法如下:
 
