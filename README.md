@@ -96,7 +96,7 @@ docker stop baota-test && docker rm baota-test
 
 ```
 docker run -itd -v /www:/www --net=host --restart=always \
---name baota cyberbolt/baota:latest \
+--name baota cyberbolt/baota \
 -port 端口号 -username 用户名 -password 密码
 ```
 
@@ -104,7 +104,7 @@ docker run -itd -v /www:/www --net=host --restart=always \
 
 ```
 docker run -itd -v /www:/www --net=host --restart=always \
---name baota cyberbolt/baota:latest \
+--name baota cyberbolt/baota \
 -port 8888 -username cyberbolt -password abc123456
 ```
 
