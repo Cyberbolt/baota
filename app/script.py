@@ -27,12 +27,15 @@ def bt_init(port: str, username: str, password: str) -> bool:
     '''
     #改面板端口
     print('正在设置面板端口')
-    child = pexpect.spawn('bt')
-    child.expect('.*：'.encode('utf-8'))
-    child.sendline('8')
-    child.expect('面板端口：'.encode('utf-8'))
-    child.sendline(port)
-    child.expect('已将面板端口修改'.encode('utf-8'))
+    try:
+        child = pexpect.spawn('bt')
+        child.expect('.*：'.encode('utf-8'))
+        child.sendline('8')
+        child.expect('面板端口：'.encode('utf-8'))
+        child.sendline(port)
+        child.expect('已将面板端口修改'.encode('utf-8'))
+    except:
+        pass
     #改面板用户名
     print('正在设置面板用户名')
     child = pexpect.spawn('bt')
